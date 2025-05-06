@@ -1,15 +1,16 @@
 backend:
-  name: github
-  repo: goodxgrief/studentenfutter  # GitHub-Repo
+  name: git-gateway
   branch: main
-media_folder: "static/uploads"
+
+media_folder: "public/uploads"
 public_folder: "/uploads"
+
 collections:
-  - name: "pages"
-    label: "Seiten"
-    folder: "content/pages"
+  - name: "posts"
+    label: "Posts"
+    folder: "src/posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Inhalt", name: "body", widget: "markdown" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
